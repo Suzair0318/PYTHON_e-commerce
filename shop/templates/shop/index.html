@@ -1,0 +1,35 @@
+
+ {% extends 'shop/basic.html' %}
+
+ {% block title %}Shop Now {% endblock %}
+
+ {% block body %}
+     
+    {% for i in database_products %}
+     
+    <div class="container my-5">
+      <div class="d-flex flex-wrap justify-content-evenly">
+        <div class="card" style="width: 18rem;">
+          <img src='/media/{{i.product_image}}' class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{ i.product_name }}</h5>
+            <p class="card-text">{{i.product_desc}}</p>
+            <p class="card-text">{{i.pub_date}}</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+    <script>
+
+    
+  </script>
+
+
+    {% endblock %}
+    <!-- {% load static %}
+     <a href="{% static 'shop/static_shop.txt' %}" >Click Me</a> -->
+
+  
